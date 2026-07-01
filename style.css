@@ -202,6 +202,25 @@ body {
     border-color: var(--primary);
 }
 
+.btn-projects {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--primary);
+    gap: 8px;
+}
+
+.btn-projects:hover {
+    background: var(--gradient);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.btn-projects svg {
+    flex-shrink: 0;
+}
+
 /* Hero Visual */
 .hero-visual {
     flex-shrink: 0;
@@ -548,6 +567,74 @@ body {
 .achievement-card p {
     color: var(--text-muted);
     font-size: 0.95rem;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.project-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--gradient);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.project-icon svg {
+    width: 26px;
+    height: 26px;
+    color: white;
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    flex: 1;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--primary-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-link {
+    color: var(--text);
 }
 
 /* Contact */
